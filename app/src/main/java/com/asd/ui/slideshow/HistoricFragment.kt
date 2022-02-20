@@ -8,13 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.asd.R
-import com.asd.databinding.FragmentSlideshowBinding
+import com.asd.databinding.FragmentHistoricBinding
 
-class SlideshowFragment : Fragment() {
+class HistoricFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: SlideshowViewModel
-    private var _binding: FragmentSlideshowBinding? = null
+    private lateinit var slideshowViewModel: HictoricViewModel
+    private var _binding: FragmentHistoricBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -26,9 +25,9 @@ class SlideshowFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         slideshowViewModel =
-            ViewModelProvider(this).get(SlideshowViewModel::class.java)
+            ViewModelProvider(this).get(HictoricViewModel::class.java)
 
-        _binding = FragmentSlideshowBinding.inflate(inflater, container, false)
+        _binding = FragmentHistoricBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textSlideshow
